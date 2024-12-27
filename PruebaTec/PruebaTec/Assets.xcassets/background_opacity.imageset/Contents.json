@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "background_opacity.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

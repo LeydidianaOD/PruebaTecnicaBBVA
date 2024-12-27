@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Modal View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="ModalViewController" id="Y6W-OH-hqX" customClass="ModalViewController" customModule="PruebaTec" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background_opacity" translatesAutoresizingMaskIntoConstraints="NO" id="vIy-AQ-7Zn">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vFc-QZ-Prv">
+                                <rect key="frame" x="40" y="45" width="240" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="yDj-Jt-Nsc"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gH7-dl-vyc">
+                                <rect key="frame" x="60" y="330" width="200" height="45"/>
+                                <color key="backgroundColor" red="0.43936222483483633" green="1" blue="0.71616275804890994" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="8Ot-cl-Uha"/>
+                                    <constraint firstAttribute="width" constant="200" id="RVE-4o-zhP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="15"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Cambiar Imagen">
+                                    <color key="titleColor" systemColor="labelColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="randomImageTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="a15-6b-jCq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KUb-7d-pyh">
+                                <rect key="frame" x="35" y="503" width="250" height="45"/>
+                                <color key="backgroundColor" systemColor="systemGray4Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="Gxi-uU-9R3"/>
+                                    <constraint firstAttribute="width" constant="250" id="IDE-eF-57I"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Cerrar Sesión">
+                                    <color key="titleColor" systemColor="labelColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="logoutTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="v66-q5-B7s"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="gH7-dl-vyc" firstAttribute="top" secondItem="vFc-QZ-Prv" secondAttribute="bottom" constant="35" id="2QJ-az-kkr"/>
+                            <constraint firstItem="vFc-QZ-Prv" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="40" id="P9K-Rl-RzO"/>
+                            <constraint firstItem="vIy-AQ-7Zn" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" id="SPn-mG-uFm"/>
+                            <constraint firstItem="KUb-7d-pyh" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="TZ1-i2-CIx"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="vFc-QZ-Prv" secondAttribute="trailing" constant="40" id="TeP-T2-8Mo"/>
+                            <constraint firstItem="vIy-AQ-7Zn" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="btG-MK-Po1"/>
+                            <constraint firstItem="vIy-AQ-7Zn" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="cvt-Ol-To1"/>
+                            <constraint firstItem="vFc-QZ-Prv" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="25" id="kI6-zy-vjZ"/>
+                            <constraint firstItem="gH7-dl-vyc" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="pR8-rs-nlo"/>
+                            <constraint firstItem="vFc-QZ-Prv" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="v86-AI-YJU"/>
+                            <constraint firstItem="vIy-AQ-7Zn" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="w4v-Gz-mil"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="KUb-7d-pyh" secondAttribute="bottom" constant="20" id="xZU-cs-CuS"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageR" destination="vFc-QZ-Prv" id="JL5-oW-lwb"/>
+                        <outlet property="logoutButton" destination="KUb-7d-pyh" id="JVa-b5-G2u"/>
+                        <outlet property="randomImgButton" destination="gH7-dl-vyc" id="xCr-II-r67"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.25" y="-27.464788732394368"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="background_opacity" width="1508" height="3252"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray4Color">
+            <color red="0.81960784310000001" green="0.81960784310000001" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
